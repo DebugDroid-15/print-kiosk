@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Cloud Print Upload</title>
+  <meta charset="UTF-8">
+  <title>Cloud Print - Upload</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="box">
+  <h2>Upload Document for Printing</h2>
 
-  <h2>Upload Your Document</h2>
-
-  <label>Choose PDF File</label>
+  <label>Select PDF File</label>
   <input type="file" id="fileInput" accept="application/pdf">
 
-  <label>Print Type</label>
+  <label>Choose Print Type</label>
   <select id="printType">
     <option value="bw">Black & White</option>
-    <option value="color">Coloured</option>
+    <option value="color">Colour</option>
   </select>
 
   <button id="uploadBtn">Upload & Generate Print-ID</button>
 
   <p id="result"></p>
-
 </div>
 
+<!-- Firebase SDKs -->
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
+<!-- Your Firebase Config File -->
 <script src="firebase-config.js"></script>
+
+<!-- Your Script Logic -->
 <script src="script.js"></script>
 
 </body>
